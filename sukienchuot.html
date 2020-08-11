@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Di chuyển hình ảnh một quả bóng</title>
+</head>
+<body>
+    <img src="Capture.PNG" id="ball">
+    <p>Click button below to move the image to right</p>
+    <button type="button" value="Click me" onclick="moveRight()">Click me</button>
+    <script>
+        window.onload = init;
+        let a = null;
+        function init() {
+            a = document.getElementById("ball");
+            a.style.left = '0px';
+            a.style.position = 'relative'
+        }
+        function moveRight(){
+            a.style.left = parseInt(a.style.left) + 20 + 'px';
+        }
+    </script>
+</body>
+</html>
